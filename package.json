@@ -8,6 +8,7 @@
     "koa": "^2.5.0",
     "koa-mount": "^3.0.0",
     "koa-static": "^4.0.2",
+    "koa-views": "^6.1.4",
     "mz": "^2.7.0"
   },
   "scripts": {

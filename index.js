@@ -13,7 +13,7 @@ const koaSwaggerApp = ({ ymlConfigFile }) => {
     })
   );
 
-  app.use(mount('/', serve(`${__dirname}/swagger-ui`)));
+  app.use(mount('/', serve(`${__dirname}/static`)));
 
   return app;
 };
