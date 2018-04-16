@@ -137,13 +137,17 @@
     function absolutePath(href) {
       var link = document.createElement("a");
       link.href = href;
-      return (link.protocol + "//" + link.host + link.pathname + link.search + link.hash);
+      return link.href;
+    }
+
+    function cleanURL(url) {
+      return url.replace(/([^:]\/)\/+/g, "$1");
     }
 
     window.onload = function () {
       // Build a system
       const ui = SwaggerUIBundle({
-        url: absolutePath('swagger.json'),
+        url: cleanURL(`${window.location.href}/swagger.json`),
         dom_id: '#swagger-ui',
         presets: [
           SwaggerUIBundle.presets.apis,
